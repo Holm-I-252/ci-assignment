@@ -7,7 +7,6 @@ jobs:
     steps:
       - checkout
       - node/install-packages
-      # - run: npm install
       - run: npm run test
 workflows:
   test_my_app:
