@@ -1,15 +1,15 @@
 version: "2.1"
-  orbs:
-    node: circleci/node@1.1
-  jobs: 
-    build: 
-      executor: node/default
-      steps:
-        - checkout
-        - node/install-packages
-          overide-ci-command: npm install
-        - run npm run test
-  workflows:
-    test_my_app:
-    jobs:
-      - test
+orbs:
+  node: circleci/node@1.1
+jobs: 
+  build: 
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages
+        overide-ci-command: npm install
+      - run npm run test
+workflows:
+  test_my_app:
+  jobs:
+    - test
