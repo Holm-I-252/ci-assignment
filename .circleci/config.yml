@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - node/install-packages
-        overide-ci-command: npm install
+      - run npm install
       - run npm run test
 workflows:
   test_my_app:
